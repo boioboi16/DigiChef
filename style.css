@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: rgb(240, 188, 17);
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+  z-index: 0;
+}
+.sidebar.open{
+  right: 0;
+}
+.main{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.main.open{
+
+
+left: -300px;
+}
+.socials{
+  background-color: rgb(204, 158, 6);
+  height: 20vh;
+}
+.socials i{
+  padding: 10px;
+}
+.sidenav{
+
+}
+.socials{
+  display: flex;
+ flex-direction: column;
+ padding-left: 30px;
+  color: #fff;
+  padding-top: 30px;
+}
+.elements{
+  margin-top: 20px;
+}
+.elements a{
+  color: #fff;
+  font-weight:200;
+  font-size:18px ;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.elements li{
+  padding-top: 20px;
+  margin-left: 40px;
+  
+}
+.mail{
+  display: flex;
+  padding-top: 15px;
+}
+.icons{
+  display: flex;
+}
+
+header{
+  min-width: 340px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  
+}
+.logo{
+ z-index: -1;
+  margin-left: 40px;
+  
+}
+.logo h2{
+  
+  font-size: 40px;
+  font-weight: 800;
+  background: linear-gradient(121.57deg, #f50707 18.77%, rgba(247, 126, 13, 0.66) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hamburger{
+  margin-left: auto;
+margin-right: 20px;
+width: 25px;
+height: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+transition: all 0.1s ease-in-out; 
+}
+.hamburger.move{
+ 
+  
+}
+.hamburger .line{
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+  margin: 1px 0;
+
+}
+.line.one.animate{
+  -webkit-transform: translateY(8px) rotate(45deg);
+  /* -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg); */
+}
+.line.two.animate{
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.line.three.animate{
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  /* -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg); */
+}
+/*---------------------------------- hero------------------------------ */
+.hero{
+  min-width: 340px;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url('/sean-pollock-PhYq704ffdA-unsplash.jpg') ; */
+  position: relative;
+
+
+}
+.hero img{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity:0.3;
+
+}
+.container{
+  
+
+  top: 30%;
+
+}
+h1{
+  font-size: 12vh;
+  font-weight: 800;
+  color:black;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.title{
+  top: 10%;
+  left:10%;
+  position: absolute;
+}
+.title p{
+  font-size: 25px;
+}
+.bottom{
+  background: linear-gradient(121.57deg, #f50707 18.77%, rgba(247, 126, 13, 0.66) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.type{
+  font-weight: 800;
+}
+
+.sub-title{
+margin-top: 50px;
+font-weight: 200;
+}
+
+.second{
+  margin-bottom: 50px;
+  font-weight: 200;
+}
+.callToAction{
+  margin-top: 30px;
+  background-color: red;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  width:120px ;
+  transition: all 0.4s ease-in-out;
+}
+.callToAction:hover{
+color:red;
+background-color: #fff;
+}
+
+
+
+
+@media (max-width:1250px){
+h1{
+  font-size: 60px;
+}
+
+  }
+
+  @media (max-width:850px){
+    h1{
+      font-size: 50px;
+    }
+    .title p{
+      font-size: 20px;
+    }
+    }
+  
+@media (max-width:550px){
+.hamburger.move{
+  position: relative;
+  left: 30px;
+}
+
+
+h1{
+font-size: 5vh;
+}
+.title p{
+  font-size: 15px;
+}
+header{
+ 
+}
+}
